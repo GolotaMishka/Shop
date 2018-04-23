@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <section id="login_section">
+                    <div  class='wrapp_form'>
+
+                        <form action='/auth/register/' method='POST'>
+
+                            {% csrf_token %}
+
+                            {% for field in register_form %}
+
+                                   <div class='form-group register_style'>
+
+                                    {{ field.errors }}
+
+                                    {{ field.label_tag }}
+
+                                    {{ field }}
+
+                                     </div>
+
+                            {% endfor %}
+                            <input  type='submit' value='SIGN UP' class='submit_auth'>
+
+                        </form>
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}

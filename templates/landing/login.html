@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <section id="login_section">
+                     <div class='login'>
+                        <form action='/auth/login/' method='POST'>{% csrf_token %}
+                      <div class="form-group">
+                        <label for='username'>User name</label>
+                        <input type="text" class="form-control" name='username' id='username'  placeholder="Enter ">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div>
+                      <div class="form-group">
+                        <label for='password' >Password</label>
+                        <input type="password" class="form-control"  name='password' id='password' placeholder="Password">
+                      </div>
+
+                      <button type="submit" class="btn btn-primary">Log in</button>
+                      <p class="register"><a  href="/auth/register/">Not registered yet? Sign up</a></p>
+
+                    </form>
+                     </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}

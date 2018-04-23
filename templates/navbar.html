@@ -1,0 +1,73 @@
+{% load static %}
+
+<section id="section_menu">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-2  logo" >
+					<img src={% static 'img/logo_1.jpg' %}  height="70px">
+				</div>
+				<div class="col-lg-1"><a href="/">Home</a></div>
+				<div class="col-lg-1"><a href="#">Devices</a></div>
+				<div class="col-lg-1"><a href="#">Contacnts</a>	</div>
+				<div class="col-lg-1"><a href="#">About us</a></div>
+				<div class="col-lg-1 " ><a href="#">More</a></div>
+				<div class="col-lg-offset-1 col-lg-1  ">
+                    <div class="basket-container">
+                        <a href="">
+                            <div class="basket_img"><img src={% static 'img/basket.png' %} height="20px" ></div>
+                            <span id="basket_total_amount"></span>
+                            <span id="basket_total_nmb">
+                            {% if products_total_nmb %}
+                                <div class="basket">
+                                    {{ products_total_nmb }}
+                                </div>
+
+                            {% else %}
+                                <div class="basket">
+                                    0
+                                </div>
+                            {% endif %}
+                        </span></a>
+                        <div class="basket-items hidden">
+                            <ul class="">
+                                {% for product_in_basket in products_in_basket %}
+                                    <li>
+                                        {{ product_in_basket.product.name }} {{ product_in_basket.nmb }} шт.
+                                        по {{ product_in_basket.price_per_item }} грн.
+                                        <a class="delete-item" href="" data-product_id="{{ product_in_basket.id }}">x</a>
+                                    </li>
+                                {% endfor %}
+
+                                <a href="{% url 'checkout'  %}">
+                                    Оформить заказ
+                                </a>
+
+                            </ul>
+                        </div>
+                    </div>
+				</div>
+
+
+				<div class="col-lg-2 col-lg-offset-1"><a href="#">
+					<img src={% static 'img/register_1.png' %} height="20px" >
+                    {% if username %}
+                        <span class="auth_user"><a href=" /auth/logout/" >Здравствуйте, ({{ username }})</a></span>
+                    {% else %}
+                        <span class="auth_user"><a  href=" /auth/login/">Log in</a></span>
+                    {% endif %}
+				</a>
+
+				</div>
+			</div>
+		</div>
+</section>
+	<section id="diverge" >
+
+	</section>
+
+
+	<section id="diverge">
+
+	</section>
+
+

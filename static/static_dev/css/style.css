@@ -1,0 +1,122 @@
+
+.hidden{
+	display:none;
+}
+
+#section_menu{
+	padding-top:2%;
+	padding-left:5%;
+}
+#section_menu .logo{
+	margin-top:-1%;
+}
+
+
+#section_menu a{
+	color:black;
+	font-size:1vw;
+	cursor:pointer;
+	font-weight:bold;
+	font-family: 'Slabo 20px', serif;
+	margin-top: 5px;
+}
+#section_menu a:hover{
+	text-decoration: none; /* Добавляем подчеркивание при наведении курсора на ссылку */
+    color: blue; /* Ссылка красного цвета */
+}
+
+#diverge{
+	height:1px;
+	width:100%;
+	background-color:#dedbdb;
+	margin-top:1%;
+}
+
+#section_slider{ }
+
+#container_for_slider{
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+    padding: 10px;
+}
+#section_slider img {
+	width:100%;
+}
+
+
+
+footer{
+
+	background-color:#1a1a1c;
+	padding-top:4%;
+}
+footer h3{
+	color:white;
+	font-family: 'Slabo ', serif;
+	font-size:20px;
+}
+
+footer li{
+	color:white;
+	font-family: 'Slabo', serif;
+	font-size:16px;
+	list-style: square;
+
+}
+#map {
+	margin-top:6%;
+}
+#social_netvork {
+	margin-top:70px;
+}
+#copyright{
+	margin-top:70px;
+	padding-top:1%;
+	background-color:#575866;
+	color:white;
+}
+
+.register_style input{
+	border-radius: 5px;
+}
+.register_style label{
+	color: red;
+}
+.basket_img{
+	float:left;
+}
+.basket-container{
+    position: relative;
+    width: 200px;
+
+}
+
+.basket-items{
+    position: absolute;
+    top: 24px;
+    width: 100%;
+    background-color: darkgrey;
+    z-index: 10;
+	border-radius: 5px;
+
+}
+
+.form-error{
+    color: red;
+}
+.basket {
+	border-radius: 5px;
+	background-color: darkgrey;
+	text-align: center;
+
+	float:right;
+	margin-right: 67%;
+	width:20%;
+	margin-top: 1%;
+}
+
+#empty_basket img{
+	height:30vh;
+	margin-top:2vh;
+	margin-bottom: 2vh;
+	margin-left: 35%;
+}
